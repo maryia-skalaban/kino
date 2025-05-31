@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rezerwacja Biletu</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/>
+  <style>
+    .booking-form {
+      max-width: 500px;
+      margin: 120px auto 50px;
+      background: white;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .booking-form h2 {
+      margin-bottom: 1em;
+    }
+
+    .booking-form input,
+    .booking-form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+
+    .booking-form button {
+      width: 100%;
+      background-color: #ffd103;
+      color: #111;
+      border: none;
+      padding: 10px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .booking-form button:hover {
+      background-color: #fce26f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CINEMA CITY</h1>
+  </header>
+
+  <main>
+    <div class="booking-form">
+      <h2>Rezerwacja biletu</h2>
+      <form action="#">
+      <input 
+      type="text" 
+      placeholder="Imię i nazwisko" 
+      required 
+      pattern="^[A-Za-zÀ-žżźćńółęąśŻŹĆĄŚĘŁÓŃ\s-]+$"
+      title="Wpisz tylko litery i myślniki" 
+      />
+        <input type="email" placeholder="Email" required />
+        <select required>
+          <option value="">Wybierz film</option>
+          <option>Film 1</option>
+          <option>Film 2</option>
+          <option>Film 3</option>
+        </select>
+        <select required>
+          <option value="">Wybierz godzinę</option>
+          <option>12:00</option>
+          <option>15:00</option>
+          <option>18:00</option>
+        </select>
+        <input type="number" placeholder="Liczba biletów" min="1" required />
+        <button type="submit">Zarezerwuj</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Cinema City
+  </footer>
+  <script>
+  document.querySelector("form").addEventListener("submit", function (e) {
+    const nameInput = this.querySelector("input[type='text']");
+    const nameValue = nameInput.value.trim();
+    const nameRegex = /^[A-Za-zÀ-žżźćńółęąśŻŹĆĄŚĘŁÓŃ\s-]+$/;
+
+    if (!nameRegex.test(nameValue)) {
+      alert("Imię i nazwisko może zawierać tylko litery, spacje i myślniki.");
+      nameInput.focus();
+      e.preventDefault(); 
+    }
+  });
+</script>
+
+</body>
+</html>
