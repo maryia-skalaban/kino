@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+}
+body h1, h2, h3, h4, h5, h6{
+  font-family: "Bebas Neue", sans-serif;
+}
+body p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #111;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    letter-spacing: 1.5cap;
+}
+
+nav {
+width: 100vw;   
+height: 70vh;                    
+background-image: url("img/a.webp");
+background-repeat: no-repeat;
+background-size: cover;     
+background-position: center center;
+
+  display: flex;
+  align-items: flex-end; /* Чтобы кнопки были внизу */
+  justify-content: center;
+
+text-align: center;
+font-size: 36px;
+font-weight: bold;
+color: #e2bd93;
+letter-spacing: 2px;
+position: relative;
+
+  position: relative;
+  padding-bottom: 40px; /* Отступ от нижнего края */
+}
+
+.nav-content {
+  display: flex;
+  gap: 20px;
+}
+
+
+.nav-btn {
+  border: solid 2px #ffd103;
+  background: none;
+  color: #ffd103;
+  font-size: 15px;
+  padding: 12px 24px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+  background-color: #fce26f;
+  color: #000;
+}
+
+
+main {
+  padding: 2em;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.filmy {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.film {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 30%;
+  padding: 1em;
+  text-align: center;
+}
+
+.film img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.film h3 {
+  margin: 10px 0;
+}
+
+.film p{
+  margin: 3px 0;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  clear: both;
+}
+
+
+.btn-d button{
+  color: blue;
+  border: none;
+  border-radius: 15px;
+  padding: 3px 20px;
+  margin: 30px 10px;
+  background: none;
+}
+
+
+
