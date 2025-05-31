@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Logowanie</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/>
+  <style>
+    .login-form {
+      max-width: 400px;
+      margin: 120px auto 50px;
+      background: white;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-form h2 {
+      margin-bottom: 1em;
+    }
+
+    .login-form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+
+    .login-form button {
+      width: 100%;
+      background-color: #ffd103;
+      color: #111;
+      border: none;
+      padding: 10px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .login-form button:hover {
+      background-color: #fce26f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CINEMA CITY</h1>
+  </header>
+
+  <main>
+    <div class="login-form">
+      <h2>Zaloguj się</h2>
+      <form action="#">
+        <input type="text" placeholder="Login" required />
+        <input type="password" placeholder="Hasło" required />
+        <button type="submit">Zaloguj się</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Cinema City
+  </footer>
+</body>
+</html>
